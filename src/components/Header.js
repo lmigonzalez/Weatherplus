@@ -9,6 +9,8 @@ const Header = (props) =>{
 
 	const weekDay = moment().format('ddd');  
 	const todayDate = moment().format("MMM D"); 
+	// console.log(weatherData)
+	// console.log(temperaturePerHour)
 	
 
 	return(
@@ -24,6 +26,8 @@ const Header = (props) =>{
 					<p>{weatherData.current.condition.text}</p>
 				</div>
 			</div>
+		{
+			temperaturePerHour.length >=1?
 			<div className="today-tem">
 				<div className="tem-per-hour">
 					<p>12AM</p>
@@ -67,7 +71,13 @@ const Header = (props) =>{
 
 				</div>
 
-			</div>
+				
+
+			</div>:
+			<h1></h1>
+		}
+
+			
 		</header>
 
 	)

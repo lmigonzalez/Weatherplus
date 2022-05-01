@@ -1,25 +1,20 @@
 import React, {useState, useEffect} from "react";
 
-import moment from "moment";
-
-
 import {ButtonGroup, Button} from 'react-bootstrap';
 import { BsFillClockFill } from "react-icons/bs";
 
 
-const HeroFooter = () => {
+const HeroFooter = (props) => {
+  const {weatherData} = props
+  let longLocalTime = weatherData.location.localtime.split(' ')[1]
+  let local24Hour = Number(longLocalTime.split(':')[0])
+  let shortTime = longLocalTime
+  if(local24Hour > 12){
+    local24Hour = local24Hour - 12;
+    shortTime = `${local24Hour}: ${longLocalTime.split(':')[1]}`
+  }
 
-const time = moment().format('h:mm:ss A')
-
-const [clock, setClock] = useState(time)
-
-// useEffect(()=>{
-//   setInterval(() => {
-//     setClock(time);
-//   }, 1000);
-// })
-
-
+  // console.log(shortTime)
 
   return (
     <div className="hero-footer">
@@ -29,7 +24,7 @@ const [clock, setClock] = useState(time)
       </ButtonGroup>
 	  <div className="time-content">
 		  <BsFillClockFill/>
-		  <p>{time}</p>
+		  <p>{shortTime}</p>
 	  </div>
     </div>
   );

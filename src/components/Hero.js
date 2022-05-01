@@ -17,10 +17,12 @@ const Hero = (props) =>{
 	return(
 		<div className="hero" style={{backgroundImage: `url(${heroImg})`}}>
 			<div className="overlay">
-			<Header weatherData = {weatherData} temperaturePerHour = {temperaturePerHour}/>
+			<Header weatherData = {weatherData}
+			 temperaturePerHour = {temperaturePerHour}/>
+
 			<Search getCity = {getCity} />
 			<CityInf weatherData = {weatherData}  />
-			<HeroFooter/>
+			<HeroFooter weatherData = {weatherData}/>
 			</div>
 
 		</div>
