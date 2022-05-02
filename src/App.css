@@ -266,3 +266,52 @@ p{
 .time-content p{
   margin-left: 0.8rem;
 }
+
+
+.news-section{
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.news-section h2{
+  color: #000;
+  margin: 2rem;
+}
+
+
+
+.news-container{
+  max-width: 1200px;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  padding: 0 1rem;
+}
+
+
+
+.card-news-container{
+}
+
+.news-text{
+  color: #000;
+  
+}
+
+.news-link{
+  color: #fff;
+}
+
+.footer{
+  margin: 2rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer p{
+  color: #000;
+
+}

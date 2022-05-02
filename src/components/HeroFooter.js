@@ -11,7 +11,7 @@ const HeroFooter = (props) => {
   let shortTime = longLocalTime
   if(local24Hour > 12){
     local24Hour = local24Hour - 12;
-    shortTime = `${local24Hour}: ${longLocalTime.split(':')[1]}`
+    shortTime = `${local24Hour}:${longLocalTime.split(':')[1]}`
   }
 
   // console.log(shortTime)
